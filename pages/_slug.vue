@@ -29,7 +29,7 @@
                   {{ post.title }}
                 </p>
               </div>
-              <div class="content">
+              <div class="content" v-if="false">
                 <h4>目次</h4>
                 <b-nav v-b-scrollspy>
                   <b-nav-item :to="{hash: child.children[0].props.href}" v-for="child in post.body.children"
