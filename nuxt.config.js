@@ -1,4 +1,5 @@
 require('dotenv').config()
+const content = require('@nuxt/content');
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -75,5 +76,13 @@ export default {
   },
   bootstrapVue: {
     icons: true
+  },
+  generate: {
+    routes: async function () {
+      const posts = await content.$content('posts').fetch();
+      return posts.map(post => {
+        return {route: '/'+post.slug, payload: post}
+      });
+    }
   }
 }
