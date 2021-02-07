@@ -1,8 +1,10 @@
 <template>
   <div>
     <div class="sub-bar">
-      <img src="https://github.com/diffshare.png"/>
-      <a href="https://github.com/diffshare">diffshare</a> / {{ post.title }}
+      <div>
+        <img src="https://github.com/diffshare.png"/>
+        <a href="https://github.com/diffshare">diffshare</a> / {{ post.title }}
+      </div>
     </div>
     <b-container>
       <article>
@@ -35,6 +37,11 @@ export default {
   margin-top: 1px;
   background: white;
   padding: 16px 40px;
+}
+.sub-bar > div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .sub-bar img {
   width: 24px;
