@@ -83,6 +83,7 @@ export default {
   .hero h1 {
     font-size: 24px !important;
     padding: 0 16px;
+    line-height: 1.5;
   }
 }
 
