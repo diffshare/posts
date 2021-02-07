@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
+  async asyncData({$content, params}) {
     const posts = await $content('posts')
       .only(['title', 'slug', 'createdAt'])
       .sortBy('createdAt', 'desc')
@@ -27,6 +27,9 @@ export default {
 
     return {posts}
   },
+  head() {
+    return {title: '記事一覧'}
+  }
 }
 </script>
 
