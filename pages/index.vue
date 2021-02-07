@@ -7,8 +7,9 @@
     <b-container>
       <div class="content">
         <p v-for="post of posts" :key="post.slug">
+          {{$moment(post.createdAt).fromNow()}} /
           <NuxtLink :to="{name: 'slug', params: {slug: post.slug}}">
-            {{$moment(post.updatedAt).fromNow()}} / {{post.title}}
+            {{post.title}}
           </NuxtLink>
         </p>
       </div>
@@ -21,7 +22,7 @@ export default {
   async asyncData({ $content, params }) {
     const posts = await $content('posts')
       .only(['title', 'slug', 'createdAt'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('createdAt', 'desc')
       .fetch();
 
     return {posts}
