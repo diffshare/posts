@@ -77,6 +77,13 @@ export default {
   .col {
     padding: 0;
   }
+  .hero {
+    margin: 48px 0 32px !important;
+  }
+  .hero h1 {
+    font-size: 24px !important;
+    padding: 0 16px;
+  }
 }
 
 .sub-bar {
