@@ -5,8 +5,6 @@ description: Nuxt.jsを使用したブログ作りについて
 
 Nuxt.jsでブログを作成してGitHubにプッシュするとGitHub ActionsでビルドされGitHub Pagesに公開されるシステムを構築する。
 
-なお [Zenn](https://zenn.dev/) のデザインが好みなのでインスパイヤする。
-
 # content モジュール
 
 @nuxt/content を導入する。

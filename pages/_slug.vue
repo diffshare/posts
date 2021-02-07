@@ -8,7 +8,7 @@
       <article>
         <div class="hero">
           <h1>{{ post.title }}</h1>
-          <span>UpdateAt: {{ post.updatedAt }}</span>
+          <span><b-icon icon="arrow-up-circle-fill"/> {{ $moment(post.updatedAt).fromNow() }}</span>
         </div>
         <div class="content">
           <nuxt-content :document="post"/>

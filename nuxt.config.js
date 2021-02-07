@@ -37,6 +37,8 @@ export default {
     '@nuxt/typescript-build',
     // https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    // https://www.npmjs.com/package/@nuxtjs/moment
+    '@nuxtjs/moment',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -57,7 +59,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      lang: 'ja'
     }
   },
 
@@ -67,5 +69,11 @@ export default {
 
   router: {
     base: '/posts/'
+  },
+  moment: {
+    locales: ['ja']
+  },
+  bootstrapVue: {
+    icons: true
   }
 }

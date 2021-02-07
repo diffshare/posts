@@ -8,7 +8,7 @@
       <div class="content">
         <p v-for="post of posts" :key="post.slug">
           <NuxtLink :to="{name: 'slug', params: {slug: post.slug}}">
-            {{post.updatedAt}} / {{post.title}}
+            {{$moment(post.updatedAt).fromNow()}} / {{post.title}}
           </NuxtLink>
         </p>
       </div>
