@@ -63,10 +63,24 @@ export default {
 </script>
 
 <style>
+@media (max-width: 575.98px) {
+  .container {
+    padding: 0;
+  }
+  .content {
+    border-radius: 2px !important;
+    padding: 16px 16px !important;
+  }
+}
+
 .sub-bar {
-  margin-top: 1px;
+  margin-top: 0px;
   background: white;
   padding: 16px 40px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .sub-bar > div {
