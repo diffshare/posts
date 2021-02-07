@@ -1,15 +1,19 @@
 <template>
-  <div class="container">
-    <li v-for="post of posts" :key="post.slug">
-      <NuxtLink :to="{ name: 'posts-slug', params: { slug: post.slug } }">
-<!--        <img :src="article.img" />-->
-        <div>
-          <h2>{{ post.title }}</h2>
-          <p>{{ post.description }}</p>
-        </div>
-      </NuxtLink>
-    </li>
-  </div>
+  <article>
+    <div class="hero">
+      <h1>posts.</h1>
+      <span>投稿一覧</span>
+    </div>
+    <b-container>
+      <div class="content">
+        <p v-for="post of posts" :key="post.slug">
+          <NuxtLink :to="{name: 'slug', params: {slug: post.slug}}">
+            {{post.updatedAt}} / {{post.title}}
+          </NuxtLink>
+        </p>
+      </div>
+    </b-container>
+  </article>
 </template>
 
 <script>
@@ -34,5 +38,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
 </style>

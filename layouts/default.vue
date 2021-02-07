@@ -1,5 +1,10 @@
 <template>
   <div>
+    <b-navbar variant="white">
+      <b-navbar-brand>
+        <NuxtLink to="/">posts.</NuxtLink>
+      </b-navbar-brand>
+    </b-navbar>
     <Nuxt />
   </div>
 </template>
@@ -29,6 +34,26 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  background: #f3f0f0;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+h1,h2,h3,string {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-weight: bold;
+  font-feature-settings: "palt";
+}
+.navbar {
+  padding-left: 40px;
+}
+.navbar-brand {
+  font-size: large;
+  font-weight: bold;
+}
+.navbar-brand a {
+  color: #111;
 }
 
 .button--green {
