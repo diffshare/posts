@@ -71,6 +71,12 @@ export default {
     border-radius: 2px !important;
     padding: 16px 16px !important;
   }
+  .row {
+    margin: 0;
+  }
+  .col {
+    padding: 0;
+  }
 }
 
 .sub-bar {
