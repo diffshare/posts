@@ -17,23 +17,14 @@
 </template>
 
 <script>
-// import Vue from 'vue'
-// import {Context} from "@nuxt/types";
-
 export default {
   async asyncData({ $content, params }) {
-    const posts = await $content('posts').fetch();
+    const posts = await $content('posts')
+      .only(['title', 'slug', 'createdAt'])
+      .sortBy('createdAt', 'asc')
+      .fetch();
 
-    // const [prev, next] = await $content('articles')
-    //   .only(['title', 'slug'])
-    //   .sortBy('createdAt', 'asc')
-    //   .fetch()
-
-    return {
-      posts,
-      // prev,
-      // next
-    }
+    return {posts}
   },
 }
 </script>
