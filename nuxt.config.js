@@ -72,7 +72,8 @@ export default {
     base: '/posts/'
   },
   moment: {
-    locales: ['ja']
+    locales: ['ja'],
+    defaultTimezone: 'Asia/Tokyo',
   },
   bootstrapVue: {
     icons: true

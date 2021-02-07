@@ -10,7 +10,10 @@
       <article>
         <div class="hero">
           <h1>{{ post.title }}</h1>
-          <span><b-icon icon="arrow-up-circle-fill"/> {{ $moment(post.createdAt).fromNow() }}</span>
+          <span>
+            <b-icon icon="arrow-up-circle-fill"/>
+            <span :title="$moment(post.createdAt)">{{ $moment(post.createdAt).fromNow() }}</span>
+          </span>
         </div>
         <b-row>
           <b-col>
