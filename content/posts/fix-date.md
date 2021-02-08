@@ -25,3 +25,12 @@ moment: {
 ```
 
 直った。良かった。
+
+# 追記 2021/2/9
+
+直っていなかった。仕方がないのでこうした。
+
+```js
+const post = await $content('posts', params.slug).fetch();
+post.createdAt = $moment.tz(post.createdAt, 'Asia/Tokyo');
+```

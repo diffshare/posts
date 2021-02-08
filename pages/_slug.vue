@@ -53,8 +53,9 @@
 export default {
   name: "_slug.vue",
 
-  async asyncData({$content, params}) {
+  async asyncData({$moment, $content, params}) {
     const post = await $content('posts', params.slug).fetch();
+    post.createdAt = $moment.tz(post.createdAt, 'Asia/Tokyo');
     const author = await $content('authors', 'diffshare').fetch();
 
     return {post, author}

@@ -19,11 +19,13 @@
 
 <script>
 export default {
-  async asyncData({$content, params}) {
+  async asyncData({$moment, $content, params}) {
     const posts = await $content('posts')
       .only(['title', 'slug', 'createdAt'])
       .sortBy('createdAt', 'desc')
       .fetch();
+    for (let post of posts)
+      post.createdAt = $moment.tz(post.createdAt, 'Asia/Tokyo');
 
     return {posts}
   },
