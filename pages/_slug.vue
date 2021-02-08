@@ -2,8 +2,8 @@
   <div>
     <div class="sub-bar d-xl-none">
       <div>
-        <img src="https://github.com/diffshare.png"/>
-        <a href="https://github.com/diffshare">diffshare</a> / {{ post.title }}
+        <img :src="author.img"/>
+        <a :href="author.url">{{ author.name }}</a> / {{ post.title }}
       </div>
     </div>
     <b-container>
@@ -25,11 +25,11 @@
             <div class="side-bar">
               <div class="content" style="margin-bottom:32px;">
                 <p>
-                  <img src="https://github.com/diffshare.png"/>
-                  <a href="https://github.com/diffshare">diffshare</a>
+                  <img :src="author.img"/>
+                  <a :href="author.url">{{ author.name }}</a>
                 </p>
                 <p>
-                  {{ post.title }}
+                  {{ author.description }}
                 </p>
               </div>
               <div class="content" v-if="false">
@@ -55,8 +55,9 @@ export default {
 
   async asyncData({$content, params}) {
     const post = await $content('posts', params.slug).fetch();
+    const author = await $content('authors', 'diffshare').fetch();
 
-    return {post}
+    return {post, author}
   },
 
   head() {
