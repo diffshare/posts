@@ -90,7 +90,7 @@ export default {
     padding: 0 16px;
     line-height: 1.5;
   }
-  .nuxt-content p {
+  .nuxt-content p, .nuxt-content ul, .nuxt-content ol {
     line-height: 1.75 !important;
   }
 }
@@ -159,7 +159,7 @@ article .hero span {
   margin-bottom: 80px;
 }
 
-.nuxt-content p {
+.nuxt-content p, .nuxt-content ul, .nuxt-content ol {
   font-size: 16px;
   text-align: justify;
   line-height: 2;

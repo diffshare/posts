@@ -38,7 +38,7 @@ html {
 
 body {
   background: #f3f0f0;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
 h1,h2,h3,string {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
