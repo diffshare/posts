@@ -90,6 +90,9 @@ export default {
     padding: 0 16px;
     line-height: 1.5;
   }
+  .nuxt-content p {
+    line-height: 1.75 !important;
+  }
 }
 
 .sub-bar {
@@ -159,7 +162,7 @@ article .hero span {
 .nuxt-content p {
   font-size: 16px;
   text-align: justify;
-  line-height: 1.5;
+  line-height: 2;
 }
 .nuxt-content h1 {
   font-size: 24px;
