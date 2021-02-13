@@ -9,6 +9,9 @@
     <b-container>
       <article>
         <div class="hero">
+          <span class="emoji">
+            <span v-emoji>{{ post.emoji }}</span>
+          </span>
           <h1>{{ post.title }}</h1>
           <span>
             <b-icon icon="arrow-up-circle-fill"/>
@@ -50,8 +53,20 @@
 </template>
 
 <script>
+import twemoji from 'twemoji'
+
 export default {
   name: "_slug.vue",
+  directives: {
+    'emoji': {
+      inserted(el) {
+        el.innerHTML = twemoji.parse(el.innerHTML)
+      }
+      // bind(el, binding, vnode) {
+      //   el.style.backgroundColor = 'lightgreen';
+      // }
+    }
+  },
 
   async asyncData({$moment, $content, params}) {
     const post = await $content('posts', params.slug).fetch();
@@ -137,7 +152,7 @@ export default {
 
 article .hero {
   text-align: center;
-  margin: 96px 0 48px
+  margin: 32px 0 48px
 }
 
 article .hero h1 {
@@ -150,6 +165,13 @@ article .hero h1 {
 
 article .hero span {
   color: #C3B5B5;
+}
+article .hero .emoji {
+  display: inline-block;
+  font-size: 48px;
+  height: 48px;
+  margin-bottom: 32px;
+  text-align: center;
 }
 
 .content {

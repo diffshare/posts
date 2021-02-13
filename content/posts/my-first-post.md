@@ -2,6 +2,7 @@
 title: Nuxt.jsでブログを作成してGitHub Pagesに投稿する
 description: Nuxt.jsを使用したブログ作りについて
 createdAt: 2021-02-07 15:57
+emoji: 🔨
 ---
 
 Nuxt.jsでブログを作成してGitHubにプッシュするとGitHub ActionsでビルドされGitHub Pagesに公開されるシステムを構築する。

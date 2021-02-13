@@ -1,8 +1,12 @@
 <template>
   <article>
     <div class="hero">
+      <span class="emoji" v-emoji>📄</span>
       <h1>posts.</h1>
-      <span>投稿一覧</span>
+      <span>
+        <b-icon icon="pencil-fill"/>
+        投稿一覧
+      </span>
     </div>
     <b-container>
       <div class="content">

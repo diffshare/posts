@@ -1,6 +1,7 @@
 ---
 title: 文字の設定
 createdAt: 2021-02-13 8:47
+emoji: ✍
 ---
 
 https://anond.hatelabo.jp/20210205011350

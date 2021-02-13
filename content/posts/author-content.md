@@ -1,6 +1,7 @@
 ---
 title: 著者情報もcontentモジュールのmdに載せる
 createdAt: 2021-02-09 7:57
+emoji: 🦔
 ---
 
 `/content/authors/diffshare.md` に著者情報を載せる。
