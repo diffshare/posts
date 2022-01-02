@@ -203,4 +203,8 @@ article .hero .emoji {
 .nuxt-content-highlight > pre {
   border-radius: 8px;
 }
+
+.nuxt-content img {
+  max-width: 100%;
+}
 </style>
